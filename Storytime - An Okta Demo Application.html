@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://hellofresh-demo.storytime.oktademo.app/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Storytime - An Okta Demo Application</title>
+  <link rel="stylesheet" href="./Storytime - An Okta Demo Application_files/materialize.min.css">
+  <link href="./Storytime - An Okta Demo Application_files/icon" rel="stylesheet">
+
+  <style>
+    @font-face {
+      font-family: 'aeonik';
+      src: url('https://cdn.demo.okta.com/fonts/aeonik-regular.woff2') format('woff2');
+    }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  footer {
+    flex-grow: 0;
+    margin-bottom: auto;
+  }
+
+  main {
+    flex-grow: 1;
+    display: flex;
+  }
+  .container {
+    width: 80%
+  }
+
+  body,h1, p {
+    font-family: aeonik, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #191919
+  }
+  .bgimg {
+    background-color: white !important;
+  }
+    .bgimg {
+      background-color: white !important;
+    }
+
+    .icon {
+      max-height: 21px;
+      position: relative;
+      top: 0.4em;
+      filter: invert(12%) sepia(46%) saturate(5088%) hue-rotate(215deg) brightness(93%) contrast(105%);
+    }
+
+    .slate-text {
+      color: #6B6966 !important;
+    }
+
+    .rounded {
+      border-radius: 15px !important;
+    }
+
+  .hero{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    overflow: clip;
+  }
+  .hero img{
+    object-fit: cover;  
+    max-height: 500px;
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  .hero h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    font-size: 5vw;
+    margin: 0px
+  }
+  .fill-parent-width {
+    width: 100%;
+  }
+  .brand-logo{
+    display: flex !important;
+  }
+  .brand-logo img{
+    max-height: 45px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  h3{
+    font-size: 2rem;
+  }
+  .auth-btn {
+    margin-left: 10px;
+    background-color: white;
+  }
+  .auth-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .inline-icon {
+    vertical-align: bottom;
+    font-size: 22px !important;
+  }
+  pre.tokenclaim {
+    display: inline;
+    font-family: inherit;
+  }
+    .btn-border {
+      border: 1px;
+    }
+
+    nav {
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+
+    nav ul a.btn,
+    nav ul a.btn-large,
+    nav ul a.btn-small,
+    nav ul a.btn-large,
+    nav ul a.btn-flat,
+    nav ul a.btn-floating {
+      margin-top: 15px;
+    }
+
+    .fill-parent-width {
+      width: 100%;
+    }
+
+    .brand-logo {
+      color: #191919; !important;
+    }
+
+    .brand-logo img {
+      max-height: 45px;
+    }
+
+    h3 {
+      font-size: 3rem;
+    }
+
+    .auth-btn {
+      margin-left: 10px;
+    }
+
+    .auth-btn img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .inline-icon {
+      vertical-align: bottom;
+      font-size: 22px !important;
+    }
+
+    .mfa-prompt {
+      color: red;
+      margin-bottom: 20px;
+    }
+
+    pre.tokenclaim {
+      display: inline;
+      font-family: inherit;
+    }
+
+    .profileJson {
+      white-space: pre-wrap;
+    }
+
+    .column {
+      float: left;
+      width: 50%;
+      padding: 12px;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .card-title{
+      font-size: 2.5rem !important;
+      line-height: 110% !important;
+    }
+    .subheading{
+      font-size: small !important;
+      margin-bottom: 1.168rem !important;
+      line-height: 15px;
+    }
+
+    .zoom:hover {
+      transform: scale(1.03);
+      transition: transform .7s ease;
+    }
+    .zoom:not(:hover) {
+      transform: scale(1);
+      transition: transform .7s ease;
+    }
+    label{
+      text-transform: capitalize;
+    }
+
+    .brand-color{ 
+      background-color: #191919 !important;
+    }
+    .brand-color-text{ 
+      color: #191919 !important;
+    }
+    .btn.brand-color:hover, .btn-floating.brand_color:hover{
+      background-color: #6B6966 
+    }
+    .sidenav li > a.btn:hover, .sidenav li > a.btn-large:hover, .sidenav li > a.btn-small:hover, .sidenav li > a.btn-large:hover {
+      background-color: #6B6966 
+    }
+    .brand-color-contrast {
+      color: white !important;
+    }
+    .brand-background{
+      background-color: #F6F1E7 !important;
+    }
+    .background-brand-color-contrast{
+      color: #191919 !important;
+    }
+    input.background-brand-color-contrast {
+      border-bottom: 1px solid #191919 !important;
+    }
+
+    .sidenav-trigger i{
+      color: #191919;
+    }
+
+    .sidenav li > a:hover {
+      background-color: #191919;
+      color: white !important;
+    }
+
+    nav ul a:hover {
+      background-color: #191919;
+      color: white !important;
+    }
+
+    .darken{
+      filter: brightness(0.65);
+    }
+
+    .lighten {
+      filter: brightness(6);
+    }
+
+    .btn{
+      border-radius: 15px;
+    }
+    .input:not([type]):focus:not([readonly]), input[type="text"]:not(.browser-default):focus:not([readonly]), input[type="password"]:not(.browser-default):focus:not([readonly]), input[type="email"]:not(.browser-default):focus:not([readonly]), input[type="url"]:not(.browser-default):focus:not([readonly]), input[type="time"]:not(.browser-default):focus:not([readonly]), input[type="date"]:not(.browser-default):focus:not([readonly]), input[type="datetime"]:not(.browser-default):focus:not([readonly]), input[type="datetime-local"]:not(.browser-default):focus:not([readonly]), input[type="tel"]:not(.browser-default):focus:not([readonly]), input[type="number"]:not(.browser-default):focus:not([readonly]), input[type="search"]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]){
+        border-bottom: 1px dashed #191919;
+        -webkit-box-shadow: 0 1px 0 0 #191919;
+        box-shadow: 0 1px 0 0 #191919;
+    }
+    .card{
+      width: 100%;
+    }
+    .card-image img {
+      border-top-right-radius: 15px !important;
+      border-top-left-radius: 15px !important;
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+    }
+
+    .card-left img{
+      border-top-left-radius: 15px !important;
+      border-bottom-left-radius: 15px !important;
+      border-top-right-radius: unset !important;
+    }
+
+    .card-right img{
+      border-top-right-radius: 15px !important;
+      border-bottom-right-radius: 15px !important;
+      border-top-left-radius: unset !important;
+      border-bottom-left-radius: unset !important;
+    }
+
+    .horizontal .card-image img {
+      min-width: 100%;
+      min-height: 100%;
+      height: auto;
+      max-width: 350px !important;
+      object-fit: cover;
+      max-height: unset;
+    }
+    .card-bottom{
+      border-bottom-left-radius: 15px !important;
+      border-bottom-right-radius: 15px !important;
+    }
+
+    .fill-available{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .split-width{
+      width: 50%;
+    }
+    .org-seperator{
+      padding: 5px;
+    }
+    .demoActions{
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+    .demoAction{
+      display: flex;
+      flex-direction: row;
+    }
+    .demoAction > a {
+      text-decoration: underline !important;
+    }
+    .de-logo{
+      margin-right: .25em;
+      display: inline-block;
+      width: 2em;
+      height: 2em;
+      border-radius: 500rem;
+      vertical-align: middle;
+    }
+    .dummyLink:hover{
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body class="brand-background">
+  <nav>
+    <div class="nav-wrapper brand-background slate-text">
+      <a href="https://storytime.oktademo.app/" class="brand-logo background-brand-color-contrast valign-wrapper">
+          <img src="./Storytime - An Okta Demo Application_files/icon.png">
+        <span class="hide-on-med-and-down">
+            Storytime</span>
+        
+      </a>
+      <a href="https://hellofresh-demo.storytime.oktademo.app/#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li>        <a class="auth-btn btn brand-color brand-color-contrast rounded" href="https://hellofresh-demo.storytime.oktademo.app/login" id="individualLogin"><b>Login</b></a>
+</li>
+      </ul>
+    </div>
+  </nav>
+  <ul class="sidenav" id="mobile-demo">
+      <li>        <a class="auth-btn btn brand-color brand-color-contrast rounded" href="https://hellofresh-demo.storytime.oktademo.app/login" id="individualLogin"><b>Login</b></a>
+</li>
+  </ul>
+  <main>
+    <div class="container fill-available">
+      <div class="card horizontal brand-color rounded">
+    <div class="card-image card-left hide-on-med-and-down split-width">
+            <img src="./Storytime - An Okta Demo Application_files/storytime-shelves.jpg">
+    </div>
+    <div class="card-stacked ">
+        <div class="card-content">
+            <div class="row">
+                <div class="col s12">
+                    <h3 class="brand-color-contrast">Your most valuable asset,<br> your identity</h3>
+                    <h5 class="brand-color-contrast darken">We're building a neutral platform where anyone can use any technology to share their story and their identity safely.</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6">
+                    <h3 class="brand-color-contrast">18,000+</h3>
+                    <p class="brand-color-contrast darken">customers</p>
+                </div>
+                <div class="col s6">
+                    <h3 class="brand-color-contrast">92%</h3>
+                    <p class="brand-color-contrast darken">recommended by Gartner® report</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6">
+                    <h3 class="brand-color-contrast">7,000+</h3>
+                    <p class="brand-color-contrast darken">integrations</p>
+                </div>
+                <div class="col s6">
+                    <h3 class="brand-color-contrast">8 billion</h3>
+                    <p class="brand-color-contrast darken">logins</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+  </main>
+  <footer class="page-footer brand-color">
+    <div class="container brand-color-contrast">
+      <div class="row">
+        <div class="col l4 s12">
+          <h5 class="brand-color-contrast">
+              Storytime
+          </h5>
+          <p class="brand-color-contrast darken">Identity can create great user experiences, increase customer sign-ups, improve employee productivity, and get apps to market faster.</p>
+        </div>
+        <div class="col l3 offset-l1 s12">
+          <h6 class="brand-color-contrast">Company</h6>
+          <ul>
+            <li><a class="brand-color-contrast darken" href="https://www.okta.com/company/">About Us</a></li>
+            <li><a class="brand-color-contrast darken" href="https://www.okta.com/customers/">Our Customers</a></li>
+          </ul>
+        </div>
+        <div class="col l3 offset-l1 s12">
+          <h6 class="brand-color-contrast">Okta Customer Identity</h6>
+          <ul>
+            <li><a class="brand-color-contrast darken" href="https://www.okta.com/customer-identity/">Getting started</a></li>
+            <li><a class="brand-color-contrast darken" href="https://explorer.auth0.com/">Auth0 Explorer</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+  <div class="footer-copyright">
+    <div class="container">
+    <span class="brand-color-contrast darken"><img src="./Storytime - An Okta Demo Application_files/okta-aura-white.svg" class="de-logo">
+          <span class="brand-color-contrast" style="vertical-align: middle;">Okta Demo Engineering</span></span>
+    
+    <span class="right demoActions">
+        <span class="demoAction">
+          <span class="brand-color-contrast darken material-icons">tour</span>
+          <a class="brand-color-contrast darken dummyLink" id="guidedTourLink" onclick="!tour.isActive() ? tour.start() : tour.cancel()"> Guide Me</a>
+        </span>
+        <div class="demoAction">
+          <span class="brand-color-contrast darken material-icons">clear_all</span>
+          <a class="brand-color-contrast darken" id="contextClearLink" href="https://hellofresh-demo.storytime.oktademo.app/context/clear"> Clear demo context authmaf</a>
+        </div>
+    </span>
+    </div>
+
+  </div>
+</footer>
+<script src="./Storytime - An Okta Demo Application_files/materialize.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+  });
+</script>
+  <link rel="stylesheet" href="./Storytime - An Okta Demo Application_files/shepherd.css">
+    <script src="./Storytime - An Okta Demo Application_files/shepherd.min.js"></script>
+  
+    <script>
+      const tour = new Shepherd.Tour({
+        defaultStepOptions: {
+          cancelIcon: {
+            enabled: true
+          },
+          classes: 'class-1 class-2',
+          scrollTo: { behavior: 'smooth', block: 'center' }
+        }
+      });
+      switch(window.location.pathname){
+        case '/':
+          if(""){
+            tour.addStep({
+              title: '<span class="brand-color-contrast material-icons shepherd-icon">thumb_up</span><span class="shepherd-title-text">You are logged in!</span>',
+              text: `You have successfully authenticated to your identity provider and you are logged into the application.<br/><br/>\
+                    Let's take a look at what you can do with your account.`,
+              buttons: [
+                {
+                  action() {
+                    return this.next();
+                  },
+                  text: 'Start'
+                }
+              ],
+              id: 'creating'
+            });
+            
+            if("true"){
+              tour.addStep({
+                title: '<span class="brand-color-contrast material-icons shepherd-icon">lock</span><span class="shepherd-title-text">Protected Actions</span>',
+                text: `See how Okta CIC can store user data on the profile and protect it's access with API scopes.`,
+                attachTo: {
+                  element: '#protectedLink',
+                  on: 'bottom'
+                },
+                buttons: [
+                  {
+                    action() {
+                      return this.back();
+                    },
+                    classes: 'shepherd-button-secondary',
+                    text: 'Back'
+                  },
+                  {
+                    action() {
+                      return this.next();
+                    },
+                    text: 'Next'
+                  }
+                ],
+                id: 'creating'
+              });
+              tour.addStep({
+                title: '<span class="brand-color-contrast material-icons shepherd-icon">account_box</span><span class="shepherd-title-text">Profile</span>',
+                text: `See how Okta CIC can provide profile management experiences uses the API.`,
+                attachTo: {
+                  element: '#profileLink',
+                  on: 'bottom'
+                },
+                buttons: [
+                  {
+                    action() {
+                      return this.back();
+                    },
+                    classes: 'shepherd-button-secondary',
+                    text: 'Back'
+                  },
+                  {
+                    action() {
+                      return this.next();
+                    },
+                    text: 'Next'
+                  }
+                ],
+                id: 'creating'
+              });
+              
+            }
+              if("false" === true){
+                tour.addStep({
+                  title: '<span class="brand-color-contrast material-icons shepherd-icon">apartment</span><span class="shepherd-title-text">Organizations</span>',
+                  text: `See how Okta CIC can manage B2B experiences via API.`,
+                  attachTo: {
+                    element: '#organizationsLink',
+                    on: 'bottom'
+                  },
+                  buttons: [
+                    {
+                      action() {
+                        return this.back();
+                      },
+                      classes: 'shepherd-button-secondary',
+                      text: 'Back'
+                    },
+                    {
+                      action() {
+                        return this.next();
+                      },
+                      text: 'Next'
+                    }
+                  ],
+                  id: 'creating'
+                });
+              }
+            tour.addStep({
+              title: '<span class="brand-color-contrast material-icons shepherd-icon">integration_instructions</span><span class="shepherd-title-text">Tokens</span>',
+              text: `You click here to see the tokens returned by the IDP to see the information sent from the IDP to the application.`,
+              attachTo: {
+                element: '#debugLink',
+                on: 'bottom'
+              },
+              buttons: [
+                {
+                  action() {
+                    return this.back();
+                  },
+                  classes: 'shepherd-button-secondary',
+                  text: 'Back'
+                },
+                {
+                  action() {
+                    return this.next();
+                  },
+                  text: 'Next'
+                }
+              ],
+              id: 'creating'
+            });
+            tour.addStep({
+              title: '<span class="brand-color-contrast material-icons shepherd-icon">logout</span><span class="shepherd-title-text">Logout</span>',
+              text: `To end your session you can click here. This will redirect to to the IDP so it knows that your session should be closed.`,
+              attachTo: {
+                element: '#logoutLink',
+                on: 'bottom'
+              },
+              buttons: [
+                {
+                  action() {
+                    return this.back();
+                  },
+                  classes: 'shepherd-button-secondary',
+                  text: 'Back'
+                },
+                {
+                  action() {
+                    return this.complete();
+                  },
+                  text: 'Finish'
+                }
+              ],
+              id: 'creating'
+            });
+          } else {
+            tour.addStep({
+              title: '<span class="brand-color-contrast material-icons shepherd-icon">waving_hand</span><span class="shepherd-title-text">Welcome</span>',
+              text: `This is customer identity demonstration application for Okta.\
+                    <br/><br/>\
+                    This guide will walk you through the demonstration and explain how you can solve key customer identity use cases\
+              `,
+              buttons: [
+                {
+                  action() {
+                    return this.next();
+                  },
+                  text: 'Start'
+                }
+              ],
+              id: 'creating'
+            });
+  
+            tour.addStep({
+              title: 'Guided Tour',
+              text: `If you are unsure, press this button to get a guided tour of how Okta can deliver the use cases on that page.`,
+              attachTo: {
+                element: '#guidedTourLink',
+                on: 'top'
+              },
+              buttons: [
+                {
+                  action() {
+                    return this.back();
+                  },
+                  classes: 'shepherd-button-secondary',
+                  text: 'Back'
+                },
+                {
+                  action() {
+                    return this.next();
+                  },
+                  text: 'Next'
+                }
+              ],
+              id: 'creating'
+            });
+            tour.addStep({
+              title: 'Demonstration Context',
+              text: `Your demonstration context describes the demo environment you are currently in.\
+              This will determine the IDP you use and apply any settings you have chosen for this instance of the application.`,
+              attachTo: {
+                element: '#contextClearLink',
+                on: 'top'
+              },
+              buttons: [
+                {
+                  action() {
+                    return this.back();
+                  },
+                  classes: 'shepherd-button-secondary',
+                  text: 'Back'
+                },
+                {
+                  action() {
+                    return this.next();
+                  },
+                  text: 'Next'
+                }
+              ],
+              id: 'creating'
+            });
+  
+            tour.addStep({
+              title: 'Begin your demo',
+              text: `Click login to start your demonstration. This will redirect you to your IDP to complete the authentication journey.`,
+              attachTo: {
+                element: '#individualLogin',
+                on: 'top'
+              },
+              buttons: [
+                {
+                  action() {
+                    return this.back();
+                  },
+                  classes: 'shepherd-button-secondary',
+                  text: 'Back'
+                },
+                {
+                  action() {
+                    return this.complete();
+                  },
+                  text: 'Finish'
+                }
+              ],
+              id: 'creating'
+            });
+          }
+          break;
+        case '/debug':
+          tour.addStep({
+              title: '<span class="brand-color-contrast material-icons shepherd-icon">code</span><span class="shepherd-title-text">Token Details</span>',
+              text: `This page displays the content of the JWT tokens returned by your IDP. These tokens determine what the application knows about you as well as what resources you grant the application access to.`,
+              buttons: [
+                {
+                  action() {
+                    return this.next();
+                  },
+                  text: 'Start'
+                }
+              ],
+              id: 'creating'
+            });
+            tour.addStep({
+              title: '<span class="brand-color-contrast material-icons shepherd-icon">account_circle</span><span class="shepherd-title-text">ID Token</span>',
+              text: `This is our OpenID Connect ID token. The contents of this token describe the identity of your user as known by the identity provider to the application.`,
+              attachTo: {
+                element: '#id_token',
+                on: 'top'
+              },
+              buttons: [
+                {
+                  action() {
+                    return this.back();
+                  },
+                  classes: 'shepherd-button-secondary',
+                  text: 'Back'
+                },
+                {
+                  action() {
+                    return this.next();
+                  },
+                  text: 'Next'
+                }
+              ],
+              id: 'creating'
+            });
+            tour.addStep({
+              title: '<span class="brand-color-contrast material-icons shepherd-icon">integration_instructions</span><span class="shepherd-title-text">See the token structure</span>',
+              text: `This link will open JWT.io with your id token and allow you to see how you token is formed, secured and validated. You can also see a breakdown of the use of the standard claims included.`,
+              attachTo: {
+                element: '#jwtio_id_token',
+                on: 'bottom'
+              },
+              buttons: [
+                {
+                  action() {
+                    return this.back();
+                  },
+                  classes: 'shepherd-button-secondary',
+                  text: 'Back'
+                },
+                {
+                  action() {
+                    return this.next();
+                  },
+                  text: 'Next'
+                }
+              ],
+              id: 'creating'
+            });
+            tour.addStep({
+              title: '<span class="brand-color-contrast material-icons shepherd-icon">vpn_key</span><span class="shepherd-title-text">Access Token</span>',
+              text: 'This is our OAuth Access token. The contents of this token describe the access granted by your user to resources protected by the identity provider.',
+              attachTo: {
+                element: '#access_token',
+                on: 'bottom'
+              },
+              buttons: [
+                {
+                  action() {
+                    return this.back();
+                  },
+                  classes: 'shepherd-button-secondary',
+                  text: 'Back'
+                },
+                {
+                  action() {
+                    return this.next();
+                  },
+                  text: 'Next'
+                }
+              ],
+              id: 'creating'
+            });
+            tour.addStep({
+              title: '<span class="brand-color-contrast material-icons shepherd-icon">integration_instructions</span><span class="shepherd-title-text">See the token structure</span>',
+              text: 'This link will open JWT.io with your access token and allow you to see how you token is formed, secured and validated. You can also see a breakdown of the use of the standard claims included.',
+              attachTo: {
+                element: '#jwtio_access_token',
+                on: 'bottom'
+              },
+              buttons: [
+                {
+                  action() {
+                    return this.back();
+                  },
+                  classes: 'shepherd-button-secondary',
+                  text: 'Back'
+                },
+                {
+                  action() {
+                    return this.complete();
+                  },
+                  text: 'Finish'
+                }
+              ],
+              id: 'creating'
+            });
+        case '/protected':  
+          tour.addStep({
+                title: '<span class="brand-color-contrast material-icons shepherd-icon">lock</span><span class="shepherd-title-text">Protecting APIs</span>',
+                text: `This page will guide you through protecting user information and actions with Okta Customer Identity Cloud.`,
+                buttons: [
+                  {
+                    action() {
+                      return this.next();
+                    },
+                    text: 'Start'
+                  }
+                ],
+                id: 'creating'
+              });
+          tour.addStep({
+              title: '<span class="brand-color-contrast material-icons shepherd-icon">lock</span><span class="shepherd-title-text">Application Metadata</span>',
+              text: "This is the information currently held by the IDP about the user in this application's app_metadata. This is information that the application can change but the user cannot directly.",
+              attachTo: {
+                element: '#app_metadata',
+                on: 'bottom'
+              },
+              buttons: [
+                {
+                  action() {
+                    return this.back();
+                  },
+                  classes: 'shepherd-button-secondary',
+                  text: 'Back'
+                },
+                {
+                  action() {
+                    return this.next();
+                  },
+                  text: 'Next'
+                }
+              ],
+              id: 'creating'
+            });
+            //TODO this could be enhanced by determining current scope of the token
+            if("true"){
+              tour.addStep({
+              title: '<span class="brand-color-contrast material-icons shepherd-icon">lock</span><span class="shepherd-title-text">Create a change</span>',
+              text: "Clicking this button will check the scope of your current access token. If this token does not include the scope demonstration:write you will be redirected to the IDP to get a new token. <br/><br/>\
+              This demonstration is configured to also require MFA when accessing the protected resource, this is done as described <a href='https://auth0.com/docs/secure/multi-factor-authentication/step-up-authentication/configure-step-up-authentication-for-web-apps' target='_blank' rel='noopener noreferrer'>here</a>.",
+              attachTo: {
+                element: '#protected_action',
+                on: 'bottom'
+              },
+              buttons: [
+                {
+                  action() {
+                    return this.back();
+                  },
+                  classes: 'shepherd-button-secondary',
+                  text: 'Back'
+                },
+                {
+                  action() {
+                    return this.complete();
+                  },
+                  text: 'Finish'
+                }
+              ],
+              id: 'creating'
+            });
+            }
+            else {
+              tour.addStep({
+              title: '<span class="brand-color-contrast material-icons shepherd-icon">vpn_key</span><span class="shepherd-title-text">Create a change</span>',
+              text: "Clicking this button will check the scope of your current access token. If this token does not include the scope demonstration:write you will be redirected to the IDP to get a new token.",
+              attachTo: {
+                element: '#protected_action',
+                on: 'bottom'
+              },
+              buttons: [
+                {
+                  action() {
+                    return this.back();
+                  },
+                  classes: 'shepherd-button-secondary',
+                  text: 'Back'
+                },
+                {
+                  action() {
+                    return this.complete();
+                  },
+                  text: 'Finish'
+                }
+              ],
+              id: 'creating'
+            });
+            }
+            break;
+        case '/profile':
+          tour.addStep({
+              title: '<span class="brand-color-contrast material-icons shepherd-icon">account_box</span><span class="shepherd-title-text">Account Management</span>',
+              text: "Once a user has created an account they need the capability to keep that information up to date and protect it.<br/><br/>\
+              This page uses the Okta Customer Identity Cloud API to manage and carry out operations on the user's profile.",
+              buttons: [
+                {
+                  action() {
+                    return this.next();
+                  },
+                  text: 'Start'
+                }
+              ],
+              id: 'creating'
+            });
+          tour.addStep({
+              title: '<span class="brand-color-contrast material-icons shepherd-icon">account_box</span><span class="shepherd-title-text">User Profile</span>',
+              text: "Basic information about the user such as their name and email address as provided by the user or their social provider are stored against the user's profile.",
+              attachTo: {
+                element: '#profile_card',
+                on: 'bottom'
+              },
+              buttons: [
+                {
+                  action() {
+                    return this.back();
+                  },
+                  classes: 'shepherd-button-secondary',
+                  text: 'Back'
+                },
+                {
+                  action() {
+                    return this.next();
+                  },
+                  text: 'Next'
+                }
+              ],
+              id: 'creating'
+            });
+          tour.addStep({
+              title: '<span class="brand-color-contrast material-icons shepherd-icon">account_box</span><span class="shepherd-title-text">User Metadata</span>',
+              text: "Information about the user can be stored against the users Customer Identity Cloud profile in a freeform user metadata object. This can be used to share information about the user between the different applications they interact with.",
+              attachTo: {
+                element: '#profile_contact_card',
+                on: 'bottom'
+              },
+              buttons: [
+                {
+                  action() {
+                    return this.back();
+                  },
+                  classes: 'shepherd-button-secondary',
+                  text: 'Back'
+                },
+                {
+                  action() {
+                    return this.next();
+                  },
+                  text: 'Next'
+                }
+              ],
+              id: 'creating'
+            });
+          tour.addStep({
+              title: '<span class="brand-color-contrast material-icons shepherd-icon">group_add</span><span class="shepherd-title-text">Combining social and local</span>',
+              text: "Okta Customer Identity Cloud allows your users to take their existing local accounts and link them to their social accounts for ease of access. This technique can also link multiple user accounts together if they are owned by the same person.<br/><br/>\
+              Learn more about this topic <a href='https://learn.demo.okta.com/resources/pdf/Account%20Linking%20with%20demo.okta.pdf' target='_blank' rel='noopener noreferrer'>here</a>",
+              attachTo: {
+                element: '#social_linking_card',
+                on: 'bottom'
+              },
+              buttons: [
+                {
+                  action() {
+                    return this.back();
+                  },
+                  classes: 'shepherd-button-secondary',
+                  text: 'Back'
+                },
+                {
+                  action() {
+                    return this.next();
+                  },
+                  text: 'Next'
+                }
+              ],
+              id: 'creating'
+            });
+          tour.addStep({
+              title: '<span class="brand-color-contrast material-icons shepherd-icon">shield_person</span><span class="shepherd-title-text">Enhancing authentication</span>',
+              text: "Okta Customer Identity Cloud can support users with a range of different authenticators to suit every user. Clicking 'Register MFA' will redirect you to your IDP to enroll in the factors that are available to you.",
+              attachTo: {
+                element: '#mfa_card',
+                on: 'bottom'
+              },
+              buttons: [
+                {
+                  action() {
+                    return this.back();
+                  },
+                  classes: 'shepherd-button-secondary',
+                  text: 'Back'
+                },
+                {
+                  action() {
+                    return this.complete();
+                  },
+                  text: 'Finish'
+                }
+              ],
+              id: 'creating'
+            });
+        break;
+        case '/organisation':
+        break;
+        default:
+        break;
+      }
+  
+      if("[object Object]".hasOwnProperty("guided_tour")){
+        if(""){
+          tour.start()
+        }
+      }
+  </script>
+  
+  <style>
+  
+    .shepherd-button{
+      background: #191919;
+      color: white !important;
+    }
+    .shepherd-button:hover {
+      background: #191919 !important;
+      color: white !important;
+      filter: brightness(150%);
+    }
+  
+    .shepherd-button-secondary {
+      background: #191919 !important;
+      filter: brightness(80%) !important;
+      color: white !important;
+    }
+    .shepherd-button-secondary:hover {
+      background: #191919 !important;
+      filter: brightness(130%) !important;
+      color: white !important;
+    }
+  
+    .shepherd-header {
+      background: #191919 !important;
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .shepherd-element.shepherd-has-title[data-popper-placement^="bottom"] > .shepherd-arrow::before {
+      background-color: #191919 !important;
+    }
+  
+    .shepherd-element.shepherd-has-title[data-popper-placement^="top"] > .shepherd-arrow::before {
+      background-color: #F6F1E7 !important;
+    }
+  
+    .shepherd-header > .shepherd-title{
+      color: white !important;
+      font-weight: bold;
+      display: inline;
+    }
+  
+    .shepherd-cancel-icon {
+      color: white !important;
+    }
+  
+    .shepherd-element{
+      background-color: #F6F1E7 !important;
+      color: #191919 !important;
+    }
+  
+    .shepherd-content {
+      border: 1px solid white;
+    }
+  
+    .shepherd-icon {
+      vertical-align: middle;
+      padding-right: 10px;
+    }
+  
+    .shepherd-title-text {
+      vertical-align: middle;
+    }
+  </style>
+
+<div class="sidenav-overlay"></div><div class="drag-target"></div></body></html>
